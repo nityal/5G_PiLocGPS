@@ -1,0 +1,7 @@
+#Mon Mar 27 14:26:14 SGT 2017
+base.0=/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b92e77ba22b1b21ccf666abbb71004bd9c6359ba
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_55904303561d4f607710cf06f7d1229b921ab1cd/classes.dex
+base.1=/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_55904303561d4f607710cf06f7d1229b921ab1cd
+file.0=/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b92e77ba22b1b21ccf666abbb71004bd9c6359ba/classes.dex

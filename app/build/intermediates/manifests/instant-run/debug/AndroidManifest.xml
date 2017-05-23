@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nus.cirlab.menu"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="nus.cirlab.menu.MainMenu"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="nus.cirlab.menu.About"
+            android:label="About Piloc"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="nus.cirlab.menu.CollectionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="nus.cirlab.menu.LocalizationActivity" >
+        </activity>
+        <activity
+            android:name="nus.cirlab.menu.LogActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="nus.cirlab.menu.SimulationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="nus.cirlab.menu.ErrorActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="nus.cirlab.menu.ConfigActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="nus.cirlab.menu.MultiLineChartActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <service
+            android:name="nus.cirl.piloc.LocalizationService"
+            android:enabled="true" />
+        <service
+            android:name="nus.cirl.piloc.RadioMapCollectionService"
+            android:enabled="true" />
+        <service
+            android:name="nus.cirl.piloc.LogService"
+            android:enabled="true" />
+        <service
+            android:name="nus.cirl.piloc.ErrorService"
+            android:enabled="true" />
+        <service
+            android:name="nus.cirl.piloc.SimulationService"
+            android:enabled="true" />
+        <service
+            android:name="nus.cirl.piloc.RadioMapConfigService"
+            android:enabled="true" />
+        <service
+            android:name="nus.cirl.piloc.SignalMonitorService"
+            android:enabled="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/drawable-ldpi/about.png",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/drawable-ldpi/about.png"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/drawable-ldpi/error.png",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/drawable-ldpi/error.png"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/drawable-ldpi/log.png",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/drawable-ldpi/log.png"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/drawable-ldpi/collection.png",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/drawable-ldpi/collection.png"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/drawable-ldpi/config.png",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/drawable-ldpi/config.png"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/drawable-ldpi/signalmonitor.png",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/drawable-ldpi/signalmonitor.png"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/drawable-ldpi/bg.png",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/drawable-ldpi/bg.png"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/drawable-ldpi/check.png",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/drawable-ldpi/check.png"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/drawable-ldpi/simulation.png",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/drawable-ldpi/simulation.png"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/drawable-ldpi/localization.png",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/drawable-ldpi/localization.png"
+    }
+]

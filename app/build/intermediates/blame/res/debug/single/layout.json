@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/layout/radiomapcollection.xml",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/layout/radiomapcollection.xml"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/layout/log.xml",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/layout/log.xml"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/layout/localization.xml",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/layout/localization.xml"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/layout/radiomapconfig.xml",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/layout/radiomapconfig.xml"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/layout/error.xml",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/layout/error.xml"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/layout/about.xml",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/layout/about.xml"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/layout/signalmonitor.xml",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/layout/signalmonitor.xml"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/layout/simulation.xml",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/layout/simulation.xml"
+    },
+    {
+        "merged": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/build/intermediates/res/merged/debug/layout/collection.xml",
+        "source": "/home/honghande/AndroidStudioProjects/PiLocConfidenceClient/app/src/main/res/layout/collection.xml"
+    }
+]
