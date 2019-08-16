@@ -20,6 +20,35 @@
             android:focusableInTouchMode="true"
             android:orientation="vertical" >
 
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:stretchColumns="1" >
+
+
+                <TableRow
+                    android:id="@+id/tableRow1" >
+
+                    <EditText
+                        android:id="@+id/LocationEditText"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="" />
+
+
+                    <Button
+                        android:id="@+id/LocationButton"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onLocBtnClicked"
+                        android:text="Set round" />
+
+                </TableRow>
+
+            </TableLayout>
+
            <TableLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
@@ -36,7 +65,15 @@
                         android:layout_weight="1"
                         android:onClick="onFPBtnClicked"
                         android:text="Log Fingerprint" />
-                    
+
+                    <Button
+                        android:id="@+id/StopfingerprintButton"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onStopFPBtnClicked"
+                        android:text="Stop Fingerprint" />
+
                 </TableRow>
 
 
@@ -67,7 +104,7 @@
                    android:id="@+id/MagneticcheckBox"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:checked="true"
+                   android:checked="false"
                    android:text="Mag" />	
                
                 <CheckBox
@@ -88,21 +125,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="" />
+            <TextView
+                android:id="@+id/GPSTextView"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Filename : Loc - From - To - Floor - Direction(D) - Trial(T) [Set Record -> Log FP -> Stop FP]" />
         </LinearLayout>
     </ScrollView>
 
-	<RelativeLayout
-	    android:id="@+id/loadingPanel"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:gravity="center" >
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
 
-	    <ProgressBar
-	        android:id="@+id/progressBar1"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:indeterminate="true" />
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
 
-	</RelativeLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
