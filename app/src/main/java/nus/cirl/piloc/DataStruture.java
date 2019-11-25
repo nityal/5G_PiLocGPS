@@ -26,8 +26,8 @@ public class DataStruture {
 			mIsUseBluetooth = b;
 			mIsUseMag =m;
 			mIsCompressed = c;
-		};
-	}
+		}
+    }
 	
 	//location algorithm
 	public static class LocConf
@@ -37,8 +37,8 @@ public class DataStruture {
 		public LocConf(int locAlgo)
 		{
 			mLocAlgoType = locAlgo;
-		};
-	}
+		}
+    }
 	
 	public static class Fingerprint implements Serializable
 	{

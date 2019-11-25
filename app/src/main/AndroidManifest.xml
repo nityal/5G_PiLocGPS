@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nus.cirlab.menu"
-    android:versionCode="1"
+    android:versionCode="4"
     android:versionName="1.0" >
 
+
     <uses-sdk
-        android:minSdkVersion="18"
-        android:targetSdkVersion="23" />
+
+        />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -19,6 +20,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -36,58 +38,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".About"
-            android:label="About Piloc"
-            android:theme="@android:style/Theme.Dialog" />
-        <activity
-            android:name="CollectionActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity android:name="LocalizationActivity" >
-        </activity>
+
         <activity
             android:name="LogActivity"
             android:screenOrientation="portrait" >
         </activity>
-        <activity
-            android:name="SimulationActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="ErrorActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="ConfigActivity"
-            android:screenOrientation="landscape" >
-        </activity>
-        <activity
-            android:name="MultiLineChartActivity"
-            android:screenOrientation="landscape" >
-        </activity>
 
-        <service
-            android:name="nus.cirl.piloc.LocalizationService"
-            android:enabled="true" />
-        <service
-            android:name="nus.cirl.piloc.RadioMapCollectionService"
-            android:enabled="true" />
         <service
             android:name="nus.cirl.piloc.LogService"
             android:enabled="true" />
-        <service
-            android:name="nus.cirl.piloc.ErrorService"
-            android:enabled="true" />
-        <service
-            android:name="nus.cirl.piloc.SimulationService"
-            android:enabled="true" />
-        <service
-            android:name="nus.cirl.piloc.RadioMapConfigService"
-            android:enabled="true" />
-        <service
-            android:name="nus.cirl.piloc.SignalMonitorService"
-            android:enabled="true" />
+        
     </application>
 
 </manifest>

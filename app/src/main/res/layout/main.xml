@@ -17,91 +17,18 @@
     tools:context=".MainMenu" >
 
     <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp" >
-
-        <ImageView
-            android:id="@+id/Btn_collection"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/collection" >
-        </ImageView>
-
-        <ImageView
-            android:id="@+id/Btn_localization"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/localization" >
-        </ImageView>
-        
-         <ImageView
-            android:id="@+id/Btn_error"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/error" >
-        </ImageView>
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp" >
-
-        <TextView
-            android:id="@+id/textview_collection"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Collection"
-            android:textSize="9pt" />
-
-        <TextView
-            android:id="@+id/textview_localization"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Localization"
-            android:textSize="9pt" />
-        
-         <TextView
-            android:id="@+id/textview_error"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Error"
-            android:textSize="9pt" />
-    </TableRow>
-
-    <TableRow
         android:id="@+id/tableRow3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp" >
-   
-         <ImageView
-            android:id="@+id/Btn_simulation"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/simulation" >
-        </ImageView>
-        
+
           <ImageView
             android:id="@+id/Btn_log"
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:src="@drawable/log" >
         </ImageView>
-        
-         <ImageView
-            android:id="@+id/Btn_config"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/config" >
-        </ImageView>
-         
+
     </TableRow>
 
     <TableRow
@@ -109,29 +36,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp" >
-       
-         <TextView
-            android:id="@+id/textview_simulation"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Simulation"
-            android:textSize="9pt" />
-         
+
           <TextView
             android:id="@+id/textview_write"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="LogSample"
-            android:textSize="9pt" />
-        
-          <TextView
-            android:id="@+id/textview_config"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Config"
             android:textSize="9pt" />
 
     </TableRow>
@@ -141,33 +52,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp" >
-   
-         <ImageView
-            android:id="@+id/Btn_signalmonitor"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/signalmonitor" >
-        </ImageView>
-        
+
+
          
     </TableRow>
 
-    <TableRow
-        android:id="@+id/tableRow6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp" >
-       
-         <TextView
-            android:id="@+id/textview_signalmonitor"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Signal Monitor"
-            android:textSize="9pt" />
 
-    </TableRow>
-    
        
 
 </LinearLayout>

@@ -1,13 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "25.0.0"
+    compileSdkVersion 28
+
 
     defaultConfig {
-        applicationId "nus.cirlab.menu"
-        minSdkVersion 18
-        targetSdkVersion 23
+        applicationId "org.nus.cirlab.mapactivity"
+        minSdkVersion 20
+        targetSdkVersion 28  // 26 earlier
+        versionCode 4
+        versionName "1.0"
+        multiDexEnabled  true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -19,8 +23,20 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:23.4.0'
-    compile files('libs/apache-commons.jar')
-    compile files('libs/commons-math3-3.2.jar')
-    compile files('libs/mpandroidchartlibrary-2-2-4.jar')
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation files('libs/apache-commons.jar')
+    implementation files('libs/commons-math3-3.2.jar')
+    implementation files('libs/mpandroidchartlibrary-2-2-4.jar')
 }
+/*
+configurations.all { //fix ClassNotFoundException : OnUnhandledKeyEventListener
+    resolutionStrategy.eachDependency { details ->
+        def requested = details.requested
+        if (requested.group == "com.android.support") {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion "26.+"  // 26 earlier
+            }
+        }
+    }
+}
+*/

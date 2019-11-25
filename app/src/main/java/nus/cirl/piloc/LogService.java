@@ -24,6 +24,7 @@ import android.os.AsyncTask;
 import android.os.Binder;
 import android.os.IBinder;
 import android.os.SystemClock;
+import android.widget.Toast;
 
 import nus.cirl.piloc.DataStruture.BTNeighbor;
 import nus.cirl.piloc.DataStruture.FPConf;
@@ -107,7 +108,7 @@ public class LogService extends Service implements SensorEventListener {
 			mRotationVector[2] = event.values[2];
 
 			SensorManager.getOrientation(mRotationMatrix, mOrientVals);
-			mAngle = (float) normalizeAngle(mOrientVals[0]);
+			mAngle = normalizeAngle(mOrientVals[0]);
 			mAzimuth = (float) Math.toDegrees(mAngle);
 			break;
 
@@ -243,11 +244,13 @@ public class LogService extends Service implements SensorEventListener {
 
 		// By default use wifi only
 		if (mFPConfig == null || mFPConfig.mIsUseWifi) {
-			mWifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+		//	mWifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+			mWifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 			if (mWifiManager != null)
 				MacAddr = mWifiManager.getConnectionInfo().getMacAddress();
 			if (!mWifiManager.isWifiEnabled())
 				mWifiManager.setWifiEnabled(true);
+			//	mWifiManager.setWifiEnabled(false);
 		}
 
 		if (mFPConfig != null && mFPConfig.mIsUseBluetooth) {
@@ -267,20 +270,21 @@ public class LogService extends Service implements SensorEventListener {
 	private class EnableWifiAndBTTask extends AsyncTask<String, Void, String> {
 		protected String doInBackground(String... url) {
 
-			if (mFPConfig == null)
+			if (mFPConfig == null) {
+			//	mWifiManager.setWifiEnabled(false);
+				mWifiManager.setWifiEnabled(true);
 				while (!mWifiManager.isWifiEnabled()) {
-					;
 				} // wait for wifi by default
+			}
 			else {
 				if (mFPConfig.mIsUseBluetooth)
 					while (!mBluetoothAdapter.isEnabled()) {
-						;
 					} // wait for Bluetooth
 
 				if (mFPConfig.mIsUseWifi)
-					while (!mWifiManager.isWifiEnabled()) {
+				//	while (!mWifiManager.isWifiEnabled()) {
 						;
-					} // wait for wifi
+				//	} // wait for wifi
 			}
 
 			if (mFPConfig == null || mFPConfig.mIsUseWifi) {
@@ -434,7 +438,6 @@ public class LogService extends Service implements SensorEventListener {
 			if (mBluetoothAdapter != null) {
 				// mBluetoothAdapter.cancelDiscovery();
 				mBluetoothAdapter.stopLeScan(mLeScanCallback);
-				;
 			}
 		}
 		mIsCollectingFP = false;
@@ -507,11 +510,10 @@ public class LogService extends Service implements SensorEventListener {
 
 	public Vector<Fingerprint> getFingerprint() {
 		if (!mIsCollectingFP) {
-			// Toast.makeText(getBaseContext(),"Fingerprint collection not
-			// started!", Toast.LENGTH_SHORT).show();
+		//	Toast.makeText(getBaseContext(),"Fingerprint collection not started!", Toast.LENGTH_SHORT).show();
 			return null;
 		}
-
+//		Toast.makeText(getBaseContext(),"Fingerprint !", Toast.LENGTH_SHORT).show();
 		Vector<Fingerprint> currentFP = new Vector<Fingerprint>();
 		HashMap<String, Integer> currentPre = new HashMap<String, Integer>();
 		HashMap<String, Integer> currentfre = new HashMap<String, Integer>();
@@ -548,6 +550,7 @@ public class LogService extends Service implements SensorEventListener {
 							currentfre.put(r.BSSID, r.frequency);
 							long actualTimeDelay = SystemClock.elapsedRealtime() - (r.timestamp / 1000);
 							currentFP.add(new Fingerprint(r.BSSID, Math.abs(r.level), r.frequency, 0, actualTimeDelay, r.SSID));
+							//Toast.makeText(getBaseContext(),"Fingerprint collection  started!", Toast.LENGTH_SHORT).show();
 						}
 					}
 				}
@@ -564,7 +567,7 @@ public class LogService extends Service implements SensorEventListener {
 				currentFP.add(new Fingerprint(bmac, Math.abs(mBluetoothScanResult.get(bmac).mRSSI), 1));
 			}
 		}
-
+		mFPConfig.mIsUseMag= false;
 		if (mFPConfig != null && mFPConfig.mIsUseMag) {
 			currentFP.add(new Fingerprint("MAGNETIC_FIELD_X", (int) Math.abs(mMag[0]), 2));
 			currentFP.add(new Fingerprint("MAGNETIC_FIELD_Y", (int) Math.abs(mMag[1]), 2));
@@ -579,10 +582,7 @@ public class LogService extends Service implements SensorEventListener {
 			char a = mac1.charAt((mac1.length() - 1));
 			char b = mac2.charAt((mac2.length() - 1));
 
-			if ((a >= '0' && a < '9' && b >= '0' && b < '9') || (a >= '9' && a <= 'f' && b >= '9' && b <= 'f'))
-				return true;
-			else
-				return false;
+			return (a >= '0' && a < '9' && b >= '0' && b < '9') || (a >= '9' && a <= 'f' && b >= '9' && b <= 'f');
 		} else
 			return false;
 	}

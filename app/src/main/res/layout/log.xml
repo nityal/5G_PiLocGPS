@@ -5,8 +5,9 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".CollectionActivity" >
+    android:paddingTop="@dimen/activity_vertical_margin">
+   <!-- tools:context=".CollectionActivity"-->
+
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -86,35 +87,16 @@
                android:layout_height="wrap_content"
                android:layout_marginBottom="7dp" >
 
-               <CheckBox
-                   android:id="@+id/WiFicheckBox"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginBottom="29dp"
-                   android:checked="true"
-                   android:text="WiFi" />
 
-               <CheckBox
-                   android:id="@+id/BluetoothcheckBox"
-                   android:layout_width="wrap_content"
+               <Spinner
+                   android:id="@+id/spinner1"
+                   android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:checked="false"
-                   android:text="IB" />
-                 <CheckBox
-                   android:id="@+id/MagneticcheckBox"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:checked="false"
-                   android:text="Mag" />	
-               
-                <CheckBox
-                   android:id="@+id/FPcheckBox"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:checked="true"
-                   android:text="Raw" />
-                
- 
+                   android:entries="@array/Floors"
+                   />
+
+
+
 
            </TableRow>
 
@@ -130,7 +112,15 @@
                 style="@android:style/TextAppearance.Large"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Filename : Loc - From - To - Floor - Direction(D) - Trial(T) [Set Record -> Log FP -> Stop FP]" />
+                android:text="" />
+            <TextView
+                android:id="@+id/FileTextView"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+
         </LinearLayout>
     </ScrollView>
 

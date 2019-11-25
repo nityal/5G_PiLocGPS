@@ -4,7 +4,17 @@
     <string name="app_name">PiLoc</string>
     <string name="action_settings">Settings</string>
     <string name="about_app">\
-		About Software:\n...Piloc is a software for indoor localization \nPowered BY:\n...Hande Hong\n...Chengwen Luo\n.........In NUS\n.........On 2016/6/11
+		WiFi Signal Strength Collector
 	</string>
+
+
+    <string-array name="Floors">
+
+        <item>Route1</item>
+        <item>Other</item>
+    </string-array>
+
+
+
 
 </resources>
